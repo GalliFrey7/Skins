@@ -17,7 +17,7 @@ export default class Header extends Component {
       <>
       <header>
           <span className='logo'>Skins</span>
-                <FaUser className='user-cart-button'/>
+                <a href='/login'><FaUser className='user-cart-button'/></a>
                 <FaSearch className='search-cart-button'/>
                 <FaShoppingCart className='shop-cart-button'/>
               

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Main from '../pages/main'
-import Register from '../pages/register'
+import RegisterPage from '../pages/register'
+import LoginPage from '../pages/Login'
 
 export default class Routers extends Component {
   render() {
@@ -9,7 +10,8 @@ export default class Routers extends Component {
       <BrowserRouter>
         <Routes>
             <Route element={<Main />} path='/'/>
-            <Route element={<Register/>} path='/register'/>
+            <Route element={<RegisterPage/>} path='/register'/>
+            <Route element={<LoginPage/>} path='/login'/>
         </Routes>      
       </BrowserRouter>
     )

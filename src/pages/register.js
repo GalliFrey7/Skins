@@ -1,30 +1,67 @@
-import React, { Component } from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
-export default class register extends Component {
-  render() {
-    return (
-      <register>
-        <Header />
+const RegisterPage = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-        <div className="container">
-          <form>
-            <label htmlFor="username">Имя пользователя:</label>
-            <input type="text" id="username" name="username" />
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
 
-            <label htmlFor="email">Электронная почта:</label>
-            <input type="email" id="email" name="email" />
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
 
-            <label htmlFor="password">Пароль:</label>
-            <input type="password" id="password" name="password" />
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
 
-            <input type="submit" value="Зарегистрироваться" />
-          </form>
-        </div>
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+  };
 
-        <Footer/>
-      </register>
-    )
-  }
-}
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // add code to handle registration
+  };
+
+  const handleLogin = () => {
+    // add code to navigate to login page
+  };
+
+  return (
+    <><Header /><div className="register-container">
+      <h1>Register</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={name} onChange={handleNameChange} required />
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" value={email} onChange={handleEmailChange} required />
+        </label>
+        <br />
+        <label>
+          Password:
+          <input type="password" value={password} onChange={handlePasswordChange} required />
+        </label>
+        <br />
+        <label>
+          Confirm Password:
+          <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
+        </label>
+        <br />
+        <button type="submit">Register</button>
+      </form>
+      <a className="register-link">Already have an account? <Link to={'/login'}>Log in</Link></a>
+    </div></>
+  );
+};
+
+export default RegisterPage;
