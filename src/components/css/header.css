@@ -1,8 +1,12 @@
-header .logo {
+header {
+    position: relative;
+}
+
+header .logo a {
     font-weight: 700;
     font-size: 30px;
+    text-decoration: none;
   }
-  
   header ul.nav {
     float: right;
     list-style: none;
@@ -24,21 +28,48 @@ header .logo {
   header ul.nav li:hover a {
     opacity: 0.5;
   }
-  
+  header .search-cart-button,
+  header .user-cart-button,
   header .shop-cart-button {
     float: right;
     cursor: pointer;
     margin-right: 20px;
+    transition: color, transform 500ms ease;
   }
   
-  header .search-cart-button {
-    float: right;
-    cursor: pointer;
+  header .shop-cart-button:hover,
+  header .shop-cart-button:active{
+    color: #dc3d3d;
+    transform: scale(1.5);
+  }
+
+  header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background: #fafafa;
+    z-index: 1000;
+
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  header .shop-cart .item{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+  }
+
+  header .shop-cart .item img{
+    width: 100px;
+    float: left;
     margin-right: 20px;
   }
-  
-  header .user-cart-button {
-    float: right;
-    cursor: pointer;
+  header .shop-cart .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
-  
+  header .shop-cart .item p{
+    color: #797979;
+    font-weight: 600;
+  }
