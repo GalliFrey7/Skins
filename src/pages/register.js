@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import '../components/css/register.css'
 
 const RegisterPage = () => {
   const [name, setName] = useState('');
@@ -59,7 +60,7 @@ const RegisterPage = () => {
         <br />
         <button type="submit">Register</button>
       </form>
-      <a className="register-link">Already have an account? <Link to={'/login'}>Log in</Link></a>
+      <p className="register-link">Already have an account? <Link to={'/login'}>Log in</Link></p>
     </div></>
   );
 };

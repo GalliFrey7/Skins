@@ -1,0 +1,44 @@
+header .logo {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  header ul.nav {
+    float: right;
+    list-style: none;
+  }
+  
+  header ul.nav li {
+    display: inline;
+    margin: 25px;
+  }
+  
+  header ul.nav li a {
+    display: inline-block;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  header ul.nav li:hover a {
+    opacity: 0.5;
+  }
+  
+  header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  header .search-cart-button {
+    float: right;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  header .user-cart-button {
+    float: right;
+    cursor: pointer;
+  }
+  

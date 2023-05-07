@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { FaShoppingCart } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import './css/header.css'
 
 
 
@@ -16,7 +17,8 @@ export default class Header extends Component {
     return (
       <>
       <header>
-          <span className='logo'>Skins</span>
+          <div>
+              <span className='logo'>Skins</span>
                 <a href='/login'><FaUser className='user-cart-button'/></a>
                 <FaSearch className='search-cart-button'/>
                 <FaShoppingCart className='shop-cart-button'/>
@@ -29,7 +31,7 @@ export default class Header extends Component {
                 <li><Link to={'/'}>About</Link></li>
                 <li><Link to={'/'}>Contact</Link></li>
               </ul>
-
+          </div>
       </header>
       </>
     );
