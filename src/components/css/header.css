@@ -73,3 +73,8 @@ header .logo a {
     color: #797979;
     font-weight: 600;
   }
+
+  header .shop-cart .empty h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }

@@ -46,4 +46,9 @@ featured {
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
+    transition: transform 500ms ease;
+   }
+
+   featured .add-to-cart:hover{
+    transform: scale(1.2) translateY(-5px);
    }
